@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+        <div id="vue-app">           
+            <button type="button" class="btn btn-large btn-block btn-success" v-on:click="like=!like">Like</button>
+            <h4 v-if="like" >Hello</h4>
+        </div>
+        <script src="vfor.js"></script>
+</body>
+</html>
