@@ -11,6 +11,13 @@
         <div id="vue-app">           
             <button type="button" class="btn btn-large btn-block btn-success" v-on:click="like=!like">Like</button>
             <h4 v-if="like" >Hello</h4>
+            <!--<h4>{{product[0]}}</h4>-->
+            <ul>
+                <li v-for="p in product">{{p}}</li>
+            </ul>
+            <ul>
+                <li v-for="e in employee">{{e.name}} / {{e.age}}</li>
+            </ul>
         </div>
         <script src="vfor.js"></script>
 </body>
