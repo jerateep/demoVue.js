@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <title>Vue.js</title>
+</head>
+<body> 
+    <div id="vue-app">
+        Name: <input type="text" name="" v-model="name"><br>
+        Gender:
+        <input type="radio" name="" value="Male" v-model="gender">
+        <label>Male</label>
+        <input type="radio" name="" value="Female" v-model="gender">
+        <label>Female</label><br>
+        Select Item: <br>
+        <input type="checkbox" name="" id="" value="PC" v-model="orders">
+        <label>PC</label><br>
+        <input type="checkbox" name="" id="" value="Tablet" v-model="orders">
+        <label>Tablet</label><br>
+        <input type="checkbox" name="" id="" value="Notebook" v-model="orders">
+        <label>Notebook</label><br>
+        <input type="checkbox" name="" id="" value="Iphone" v-model="orders">
+        <label>Iphone</label><br>
+        การขนส่ง: 
+        <select name="" id="" v-model="messenger">
+            <option value="">--เลือกการขนส่ง--</option>
+            <option value="ธรรมดา">ธรรมดา</option>
+            <option value="EMS">EMS</option>
+            <option value="Kerry">Kerry</option>
+        </select>
+        <hr>
+       <h1>Name: {{name}}</h1>
+       <h1>Age: {{age}}</h1>
+       <button type="button" class="btn btn-large btn-block btn-default" v-on:click="addAge">+</button>       
+       <button type="button" class="btn btn-success" v-on:click="subAge()">-</button>
+       <h1>Website: <a v-bind:href="web">Google</a></h1>
+       <input type="text" name="" v-on:keyup="addCount">
+       <h1>Orders: {{orders}}</h1>
+       <h1>Gender: {{gender}}</h1> 
+       <h1>การขนส่ง: {{messenger}}</h1>
+       <h1>{{count}}</h1>
+       <!--
+           <input type="text" name="" v-bind:value="job">
+       -->      
+       
+    </div>
+    <hr>
+
+    <div id="app">
+        <table border="1">
+            <tr>
+            <th>mail</th>
+            <th>date</th>
+            <th>adress</th>
+            <th>company</th>
+            <th>fliers</th>
+            </tr>
+            <tr v-for="item in rowData" >
+                <th scope="row">{{ item.mail }}</th>
+                <td>{{ item.date }}</td>
+                <td>{{ item.adress }}</td>
+                <td>{{ item.company }}</td>
+                <td>{{ item.fliers }}</td>
+            </tr>
+        </table>
+        
+        <button type="button" class="btn btn-large btn-block btn-success" v-on:click="addItem()">Add Row</button>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
