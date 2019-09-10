@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <title>Method</title>
+</head>
+<body>
+    <div id="vue-app">
+        <span>ชื่อ</span>
+        <input v-model="newData.empName">
+        <span>เงินเดือน</span>
+        <input v-model="newData.salary">
+        <br><br>
+        <button @click="addEmp">Save</button>
+        <br>
+        <ul>
+            <li v-for="emp in empGroup">
+                {{emp.empName}} ได้เงินเดือน {{emp.salary}}
+            </li>
+        </ul>
+    </div>
+    <script src="./Method.js"></script>
+</body>
+</html>

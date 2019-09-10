@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo Firebase  Vue.js</title>
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container col-md-6" id="comment" @submit.prevent="storeMessages">
+        <h2>Vue.js Firebase</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text text-muted"></p>
+            </div>
+        </div>
+        <form class="form-group">
+            <label for="">Comment</label>
+            <div>
+                <textarea name="name" class="form-group" v-model="messageText"></textarea>
+            </div>
+            <strong for="">Name :</strong><br>
+            <input type="text" class="form-control" placeholder="Name" v-model="name"><br>
+            <button type="submit" name="" class="btn btn-success">Post</button>
+        </form>
+    </div>
+        
+    
+    
+    
+    
+    
+    
+    
+    <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDzErRgYQvHb7Z_ULbUZEBCZjqszuoJB_E",
+    authDomain: "demovuejs-6058e.firebaseapp.com",
+    databaseURL: "https://demovuejs-6058e.firebaseio.com",
+    projectId: "demovuejs-6058e",
+    storageBucket: "demovuejs-6058e.appspot.com",
+    messagingSenderId: "282360137609",
+    appId: "1:282360137609:web:e593a128579e7da2e1c358"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    <script src="fb.js"></script>
+</body>
+
+</html>
